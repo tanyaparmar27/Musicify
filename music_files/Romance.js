@@ -1,15 +1,3 @@
-// document.getElementById("3").onclick = function () {
-//     location.href = "player.html";}
-// var audiolist = document.querySelectorAll('.auido-list');
-
-// function currentsong() {
-//     //  var indexcurrentsong = e.getAttribute('data');
-//     const index = document.getElementsByTagName('input').getAttribute("class");
-//     console.log(index);
-
-
-
-// };  
 var array = {
         // Romance songs 
         "song": [{
