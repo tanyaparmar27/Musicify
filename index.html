@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musicify</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 97.5vh;
+            background-color: black;
+            color: white;
+            overflow: hidden;
+            background-image: linear-gradient(to bottom, black, #007375e0);
+        }
+        
+        button {
+            font-family: 'Kaushan Script', cursive;
+            font-size: 2.5vw;
+            padding: 0.5rem 1rem;
+            margin: -3% 0 0 0;
+            margin-left: 30%;
+            background: black;
+            max-width: 800px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #a8ea37e0;
+            text-align: center;
+            width: 38%;
+            box-shadow: 0px 0px 25px black;
+            border: 2px solid #02f0f8e0;
+        }
+        
+        button:hover {
+            background-color: #02f0f8e0;
+            border: 2px solid #000;
+            color: black;
+            cursor: pointer;
+        }
+        
+        img {
+            display: block;
+            margin: auto;
+            height: auto;
+            width: 50%;
+            max-width: 350px;
+            margin-bottom: 5%;
+        }
+        
+        .muzieknootjes {
+            display: block;
+            margin: auto;
+            position: relative;
+            width: 100%;
+            min-width: 300px;
+            border: 0px solid #000;
+        }
+        
+        .noot-1,
+        .noot-2,
+        .noot-3,
+        .noot-4,
+        .noot-5,
+        .noot-6,
+        .noot-7,
+        .noot-8,
+        .noot-9,
+        .noot-10,
+        .noot-11,
+        .noot-12,
+        .noot-13,
+        .noot-14,
+        .noot-15,
+        .noot-16,
+        .noot-17,
+        .noot-18 {
+            position: absolute;
+            animation: notes 2s infinite linear;
+            font-size: 35px;
+            opacity: 0;
+            color: #a8ea37e0;
+            z-index: -1;
+        }
+        
+        .noot-1 {
+            top: 0;
+            left: 0;
+            animation-delay: 0.5s;
+        }
+        
+        .noot-2 {
+            top: 35%;
+            left: 12.5%;
+            animation-delay: 1s;
+        }
+        
+        .noot-3 {
+            top: 0;
+            left: 25%;
+            animation-delay: 1.5s;
+        }
+        
+        .noot-4 {
+            top: 35%;
+            left: 37.5%;
+            animation-delay: 2s;
+        }
+        
+        .noot-5 {
+            top: 0;
+            left: 50%;
+            animation-delay: 0.5s;
+        }
+        
+        .noot-6 {
+            top: 35%;
+            right: 37.5%;
+            animation-delay: 1s;
+        }
+        
+        .noot-7 {
+            top: 0;
+            right: 25%;
+            animation-delay: 1.5s;
+        }
+        
+        .noot-8 {
+            top: 35%;
+            right: 12.5%;
+            animation-delay: 2s;
+        }
+        
+        .noot-9 {
+            top: -10%;
+            right: 8%;
+            animation-delay: 0.5s;
+        }
+        
+        .noot-10 {
+            bottom: 12.5%;
+            left: 0;
+            animation-delay: 0.5s;
+        }
+        
+        .noot-11 {
+            bottom: -25%;
+            left: 12.5%;
+            animation-delay: 1s;
+        }
+        
+        .noot-12 {
+            bottom: 12.5%;
+            left: 25%;
+            animation-delay: 1.5s;
+        }
+        
+        .noot-13 {
+            bottom: -25%;
+            left: 37.5%;
+            animation-delay: 2s;
+        }
+        
+        .noot-14 {
+            bottom: 12.5%;
+            left: 50%;
+            animation-delay: 0.5s;
+        }
+        
+        .noot-15 {
+            bottom: -25%;
+            right: 37.5%;
+            animation-delay: 1s;
+        }
+        
+        .noot-16 {
+            bottom: 12.5%;
+            right: 25%;
+            animation-delay: 1.5s;
+        }
+        
+        .noot-17 {
+            bottom: -25%;
+            right: 12.5%;
+            animation-delay: 2s;
+        }
+        
+        @keyframes notes {
+            0% {
+                transform: scale(1) translate(0, 0);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.5) translate(50%, -50%);
+            }
+            80% {
+                opacity: 0;
+                transform: scale(1.5) translate(100%, -100%);
+            }
+            100% {
+                transform: scale(1.5) translate(100%, -100%);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="muzieknootjes">
+        <div class="noot-1">
+            &#9835; &#9833;
+        </div>
+
+        <div class="noot-2">
+            &#9833;
+        </div>
+
+        <div class="noot-3">
+            &#9839; &#9834;
+        </div>
+
+        <div class="noot-4">
+            &#9834;
+        </div>
+
+        <div class="noot-5">
+            &#9835; &#9833;
+        </div>
+
+        <div class="noot-6">
+            &#9833;
+        </div>
+
+        <img src="images/logo.png" alt="" height="10" width="10" >
+
+        <div class="btn"> <button type="button" id="myButton">let the music take you away...<span> &#9834&#9834 </span> </button> </div>
+
+        <div class="noot-7">
+            &#9839; &#9834;
+        </div>
+
+        <div class="noot-8">
+            &#9834;
+        </div>
+
+        <div class="noot-9">
+            &#9835; &#9833;
+        </div>
+
+        <div class="noot-10">
+            &#9839; &#9834;
+        </div>
+
+        <div class="noot-11">
+            &#9834;
+        </div>
+
+        <div class="noot-12">
+            &#9835; &#9833;
+        </div>
+
+        <div class="noot-13">
+            &#9833;
+        </div>
+
+        <div class="noot-14">
+            &#9839; &#9834;
+        </div>
+
+        <div class="noot-15">
+            &#9834;
+        </div>
+
+        <div class="noot-16">
+            &#9835; &#9833;
+        </div>
+
+        <div class="noot-17">
+            &#9833;
+        </div>
+
+    </div>
+    <script>
+        document.getElementById("myButton").onclick = function() {
+            location.href = "main.html";
+        };
+    </script>
+</body>
+
+</html>

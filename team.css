@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+body {
+    margin-top: 50px!important;
+    overflow-x: hidden;
+}
+
+#btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 3%;
+    top: 6%;
+}
+
+::selection {
+    color: #02f0f8e0;
+    background: transparent;
+}
+
+.container {
+    margin-bottom: 4%;
+}
+
+.logo {
+    /* margin-left: 17%; */
+    width: 10%;
+    height: 15vh;
+    margin-right: 2%;
+    /* max-height: 300px; */
+    /* margin: auto; */
+    /* margin: auto; */
+    /* margin-right: -40%;
+    margin-bottom: 2%; */
+}
+
+.our-team-head {
+    width: 100%;
+    /* margin-left: 7%; */
+    /* margin: auto; */
+    /* padding-left: 20%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* vertically center by align item
+    horizontal center by justify content */
+}
+
+.our-team-head .text {
+    font-family: 'Kaushan Script', cursive;
+    margin-top: 2%;
+    /* margin-bottom: 1%; */
+    /* text-align: center; */
+    /* width: 100%; */
+    margin-left: 1%;
+    font-size: 60pt;
+    color: white;
+    /* margin: auto; */
+    text-shadow: 2px 2px 5px #02f0f8e0;
+    -webkit-text-stroke: 0.5px #02f0f8e0;
+}
+
+.our-team {
+    text-align: center;
+    position: relative;
+    color: #fff;
+}
+
+.our-team img {
+    width: 100%;
+    height: 100%;
+    border: 1   px solid black;
+    box-shadow: black 0px 1px 2px 0px, black 0px 2px 6px 2px;
+}
+
+.our-team .content {
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    padding-top: 45%;
+    transform: perspective(400px) rotateX(-90deg);
+    transform-origin: center top 0;
+    transition: all 0.5s ease 0s;
+    opacity: 0;
+}
+
+.our-team:hover .content,
+.our-team.active .content {
+    opacity: 1;
+    transform: perspective(400px) rotateX(0deg);
+}
+
+.our-team .content .title {
+    margin: 0 0 10px;
+    display: block;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.our-team .content .post {
+    margin: 0 0 25px;
+    display: block;
+    font-size: 15px
+}
+
+.our-team .social {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.our-team .social li {
+    display: inline-block;
+}
+
+.our-team .social li a {
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 0;
+    background-color: #02f0f8e0;
+    margin-right: 5px;
+    transition: all 0.5s ease 0s;
+    position: relative;
+}
+
+.our-team .social li a:hover,
+.our-team.active .social li a {
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+
+/* @media screen and (max-width: 990px) {
+    .our-team {
+        margin-bottom: 30px;
+    }
+} */

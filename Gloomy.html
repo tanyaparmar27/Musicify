@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musicify</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="common.css">
+
+</head>
+
+<body>
+    <!-- <svg class="back-btn" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M16.6625,44.3975l-7.2025,7.2025l76.54,76.54l76.54,-76.54l-7.2025,-7.2025l-69.3375,69.3375z"></path></g></g></svg> -->
+
+    <div class="main">
+        <div class="container">
+            <img src="images/icon.png" width="50" height="70">
+            <div class="text1">Gloomy</div>
+
+        </div>
+        <img id="btn" src="images/white.png">
+
+        <div class="shift">
+
+            <ul class="list" id="one">
+
+            </ul>
+        </div>
+    </div>
+    <script>
+        const btn = document.getElementById("btn");
+        btn.addEventListener('click', () => {
+            window.location.href = "main.html";
+        })
+    </script>
+    <script src="Gloomy.js"></script>
+</body>
+
+</html>

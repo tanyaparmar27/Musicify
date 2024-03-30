@@ -1,0 +1,331 @@
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    body {
+        background: black;
+    }
+    
+     ::selection {
+        color: #02f0f8e0;
+        background: transparent;
+    }
+    
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 20%;
+        background: #1b1a1a9e;
+        z-index: 100;
+    }
+    
+    .home-section {
+        width: 70%;
+        display: flex;
+        margin-left: 24%;
+        overflow-x: hidden;
+        align-content: center;
+        flex-direction: row;
+        justify-content: center;
+        background: black;
+    }
+    
+    .logo img {
+        margin-left: 20%;
+        height: auto;
+        margin-top: 5%;
+        width: 60%;
+    }
+    
+    .home {
+        display: flex;
+        color: whitesmoke;
+        font-size: 2rem;
+        margin-left: 1rem;
+    }
+    
+    .home h6 {
+        margin-left: 0.5rem;
+        font-family: serif;
+    }
+    
+    .home h6 a {
+        color: whitesmoke;
+        text-decoration: none;
+        font-family: serif;
+    }
+    .search {
+        display: flex;
+        color: whitesmoke;
+        font-size: 2rem;
+        margin-left: 1rem;
+        font-weight: lighter;
+    }
+    
+    .search h6 {
+        color: whitesmoke;
+        font-family: serif;
+    }
+    
+    .search h6 a {
+        color: whitesmoke;
+        text-decoration: none;
+        font-family: serif;
+        /* margin-left: 0.5rem; */
+    }
+    
+    .team h6 a {
+        color: whitesmoke;
+        text-decoration: none;
+        font-family: serif;
+        /* margin-left: 0.5rem; */
+    }
+    
+    .team {
+        display: flex;
+        color: whitesmoke;
+        font-size: 2rem;
+        margin-left: 1rem;
+        font-weight: lighter;   
+    }
+    
+    .team h6 {
+        color: whitesmoke;
+        font-family: serif;
+        margin-left: 1%;
+    }
+    
+    .team img {
+        width: 35px;
+        height: 35px;
+        margin-top: -1%;
+    }
+    
+    
+    .about {
+        display: flex;
+        color: whitesmoke;
+        font-size: 2rem;
+        margin-left: 1rem;
+        font-weight: lighter;
+    }
+    
+    .about h6 {
+        color: whitesmoke;
+        font-family: serif;
+        margin-left: 1%;
+    }
+    .about h6 a {
+        color: whitesmoke;
+        text-decoration: none;
+        font-family: serif;
+        /* margin-left: 0.5rem; */
+    }
+    
+    .about img {
+        width: 25px;
+        height: 25px;
+        margin-top: -1%;
+    }
+    
+    .contact {
+        display: flex;
+        color: whitesmoke;
+        font-size: 2rem;
+        margin-left: 1rem;
+        font-weight: lighter;
+    }
+    
+    .contact h6 {
+        color: whitesmoke;
+        font-family: serif;
+        margin-left: 1%;
+    }
+    .contact h6 a {
+        color: whitesmoke;
+        text-decoration: none;
+        font-family: serif;
+        /* margin-left: 0.5rem; */
+    }
+    
+    .contact img {
+        width: 25px;
+        height: 25px;
+        margin-top: -1%;
+    }
+    .element-navbar .home,
+    .element-navbar .search,
+    .element-navbar .team {
+        margin-top: 1rem;
+    }
+    
+    .playlists {
+        width: 90%;
+        margin-top: 4%;
+    }
+    
+    .playlist {
+        width: 32%;
+        height: 16rem;
+        margin-bottom: 2rem;
+        margin-left: 1.5rem;
+        background: #101010;
+        box-shadow: 0px 0px 7px #d0a2d7e0;
+        color: cadetblue;
+        background-color: transparent;
+        perspective: 1000px;
+    }
+    
+    .playlist img {
+        width: 100%;
+        height: 16rem;
+    }
+    
+    .inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+    
+    .playlist:hover .inner {
+        transform: rotateY(180deg);
+    }
+    
+    .front,
+    .back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    
+    .back h2 {
+        text-shadow: 2px 2px 8px #daa7d4e0;
+        margin-top: 17%;
+        color: rgb(215, 165, 215);
+        font-weight: 500;
+        font-size: 2.5vw;
+    }
+    .back h4 {
+        text-shadow: 2px 2px 8px #daa7d4e0;
+        margin-top: 7%;
+        color: rgb(215, 165, 215);
+        font-weight: 500;
+        font-size: 2.3vw;
+    }
+    
+    .front {
+        background-color: #101010;
+        color: black;
+        width: 100%;
+    }
+    
+    .back {
+        background-image: linear-gradient(to top, black, #007375e0);
+        color: white;
+        width: 100%;
+        transform: rotateY(180deg);
+    }
+    
+    .upper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+    .lower {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+    
+    .muzieknootjes {
+        display: block;
+        position: relative;
+        width: 100%;
+        min-width: 300px;
+        /* height: 100px; */
+        margin-top: 15rem;
+        border: 0px solid #000;
+    }
+    
+    .noot-1,
+    .noot-2,
+    .noot-3,
+    .noot-4,
+    .noot-5,
+    .noot-6 {
+        position: absolute;
+        animation: notes 2s infinite linear;
+        font-size: 35px;
+        opacity: 0;
+        color: rgb(215, 165, 215);
+        z-index: -1;
+    }
+    
+    .noot-1 {
+        top: -90px;
+        left: 0;
+        animation-delay: 0.5s;
+    }
+    
+    .noot-2 {
+        top: -160px;
+        left: 30%;
+        animation-delay: 1s;
+    }
+    
+    .noot-3 {
+        top: 0px;
+        left: 50%;
+        animation-delay: 2.5s;
+    }
+    
+    .noot-4 {
+        top: -150px;
+        left: 60%;
+        animation-delay: 2s;
+    }
+    
+    .noot-5 {
+        top: -5px;
+        left: 40%;
+        animation-delay: 2.0s;
+    }
+    
+    .noot-1 {
+        top: -80px;
+        left: 30%;
+        animation-delay: 0.5s;
+    }
+    
+    @keyframes notes {
+        0% {
+            transform: scale(1) translate(0, 0);
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+            transform: scale(1.5) translate(50%, -50%);
+        }
+        80% {
+            opacity: 0;
+            transform: scale(1.5) translate(100%, -100%);
+        }
+        100% {
+            transform: scale(1.5) translate(100%, -100%);
+            opacity: 0;
+        }
+    }

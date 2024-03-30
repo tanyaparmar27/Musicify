@@ -1,0 +1,277 @@
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+            font-size: 14px;
+            /* overflow-y: hidden; */
+        }
+        /* #for white theme */
+        /* currently it is light theme but later with help of js we will make toggle button which will tranform it to dark and light mode */
+        
+        html {
+            --bg: #121212;
+            --color-text: #e2e2e2;
+            --banner: #fefefe;
+            --color-shadow: -3px -3px 10px rgba(255, 255, 255, 0.05), 3px 3px 15px rgba(0, 0, 0, 0.5);
+            --color-inset-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.01), inset 2px 2px 6px rgba(0, 0, 0, 0.8);
+        }
+        
+        html[data-theme='dark'] {
+            --bg: #f5f6f7;
+            --color-text: #121212;
+            --banner: #333333;
+            --color-shadow: -4px -2px 4px 0px #ffffff, 4px 2px 6px 0 #dfe4ea;
+            --color-inset-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.8), inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+         ::selection {
+            color: #02f0f8e0;
+            background: transparent;
+        }
+        
+        body {
+            background: var(--bg);
+            color: var(--color-text);
+            overflow: hidden;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .heart {
+            position: absolute;
+            pointer-events: none;
+            transform: translate(-50%, 50%);
+            width: 30px;
+            background: url(images/icons8-musical-notes-90.png);
+            height: 30px;
+            background-size: cover;
+            animation: heart1 2s linear infinite;
+        }
+        
+        @keyframes heart1 {
+            0% {
+                transform: translate(-50%, -50%);
+                opacity: 1;
+                /* filter: hue-rotate(0deg); */
+            }
+            100% {
+                transform: translate(-50%, -1000%);
+                opacity: 0;
+                /* filter: hue-rotate(720deg); */
+            }
+        }
+        
+        .player {
+            width: 80%;
+            min-height: 550px;
+            max-width: 300px;
+            padding: 3rem 1.25rem;
+            margin: 2rem auto;
+            background: var(--bg);
+            box-shadow: var(--color-shadow);
+            border-radius: 15px;
+            position: relative;
+            box-shadow: -1px 0px 14px 0px #02f0f8e0;
+        }
+        
+        .header {
+            height: 40px;
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            align-items: center;
+            justify-items: center;
+        }
+        
+        .header>.button {
+            width: 2rem;
+            height: 2rem;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            background: var(--bg);
+            box-shadow: var(--color-shadow);
+            border-radius: 5px;
+        }
+        
+        #back {
+            transform: rotate(90deg);
+            transition: 0.2s ease;
+        }
+        
+        #back-player {
+            transform: rotate(270deg);
+            width: 24px;
+            height: 24px;
+        }
+        
+        .special {
+            transform: rotate(270deg);
+            transition: 0.2s ease;
+            width: 24px;
+            height: 24px;
+        }
+        
+        .image {
+            display: block;
+            width: 175px;
+            height: 175px;
+            object-fit: cover;
+            margin: 1rem auto;
+            border-radius: 50%;
+            border: 4px solid #dcdfe2;
+            box-shadow: var(--color-shadow);
+        }
+        
+        .information {
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        
+        .information h1 {
+            color: var(--black);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        
+        .information p {
+            font-size: 1.15rem;
+            color: var(--color-text);
+        }
+        
+        .progress {
+            padding: 10px 0;
+        }
+        
+        .progress-time {
+            padding: 3px 5px;
+            color: var(--color-text);
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .progress-time>p {
+            font-size: 0.65rem;
+        }
+        
+        .buttons {
+            margin: 2rem 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        
+        .button {
+            color: var(--color-text);
+            border-radius: 50%;
+            margin: 0 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.2s ease;
+            box-shadow: var(--color-shadow);
+        }
+        
+        .button:hover {
+            box-shadow: -1px 0px 14px 0px #02f0f8e0;
+        }
+        
+        .button-sm {
+            width: 2rem;
+            height: 2rem;
+            opacity: 0.75;
+        }
+        
+        .button-md {
+            width: 2.5rem;
+            height: 2.5rem;
+            opacity: 0.85;
+        }
+        
+        .button-lg {
+            width: 3.25rem;
+            height: 3.25rem;
+            /* opacity: 1; */
+        }
+        
+        .bar {
+            width: 50%;
+            height: 2px;
+            margin: auto;
+            background: var(--color-text);
+            border-radius: 25px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            bottom: 1rem;
+        }
+        
+        .playpause.active {
+            box-shadow: var(--color-inset-shadow);
+        }
+        
+        .loop.active,
+        .shuffle:active,
+        .prev:active,
+        .next:active {
+            box-shadow: var(--color-inset-shadow);
+        }
+        
+        .fa-play {
+            display: block;
+        }
+        
+        .fa-pause {
+            display: none;
+        }
+        
+        .playpause.active .fa-play {
+            display: none;
+        }
+        
+        .playpause.active .fa-pause {
+            display: block;
+        }
+        
+        .seekslider {
+            width: 100px;
+            height: 3px !important;
+            -webkit-appearance: none;
+            border-radius: 10px;
+            background: var(--color-text);
+            z-index: 3;
+            outline: none;
+            position: fixed;
+            margin-left: 82px;
+            margin-top: 10px;
+        }
+        
+        .seekslider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 10px;
+            height: 10px;
+            background: var(--color-text);
+            border-radius: 50%;
+            cursor: pointer;
+            outline: none;
+            transform: scale(1);
+        }
+        
+        .seekslider:active::-webkit-slider-thumb {
+            transform: scale(1.2);
+            box-shadow: -1px 0px 14px 0px #02f0f8e0;
+        }
+        
+        label {
+            cursor: pointer;
+        }
+        
+        input[type="checkbox"] {
+            -webkit-appearance: none;
+        }
+        
